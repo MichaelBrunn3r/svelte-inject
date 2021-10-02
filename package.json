@@ -1,0 +1,76 @@
+{
+  "name": "@mibu/svelte-inject",
+  "author": "Michael Brunner <michaelbrunn3r@gmail.com>",
+  "version": "0.1.0",
+  "description": "Svelte action to inject elements into the DOM",
+  "homepage": "https://github.com/MichaelBrunn3r/svelte-inject",
+  "bugs": {
+    "url": "https://github.com/MichaelBrunn3r/svelte-inject/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelBrunn3r/svelte-inject.git"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/svelte-inject.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "LICENSE"
+  ],
+  "keywords": [
+    "svelte",
+    "dom",
+    "inject",
+    "insert"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "size-limit": [
+    {
+      "path": "dist/svelte-inject.cjs.production.min.js",
+      "limit": "1 KB"
+    },
+    {
+      "path": "dist/svelte-inject.esm.js",
+      "limit": "1 KB"
+    }
+  ],
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/release-notes-generator": "^10.0.2",
+    "@size-limit/preset-small-lib": "^5.0.5",
+    "husky": "^7.0.2",
+    "semantic-release": "^18.0.0",
+    "size-limit": "^5.0.5",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
