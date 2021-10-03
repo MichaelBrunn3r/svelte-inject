@@ -29,13 +29,13 @@ new App({
 	anchor: ... // Insert before child of target
 });
 ```
-Consider wanting to modify a webiste by adding toggle to the navbar and some toggleable content to an existing content container:
+Consider modifying a webiste by adding a toggle to the navbar and some toggleable content to an existing content container:
 ```html
 <nav id="navbar">
-	<button id="toggle"/> <!-- toggle we want to inject -->
+  <button id="toggle"/> <!-- toggle we want to inject -->
 </nav>
 <div id="container">
-	<div id="content"/> <!-- content we want to inject -->
+  <div id="content"/> <!-- content we want to inject -->
 </div>
 ```
 You would have to create a component for each and then inject them:
@@ -50,8 +50,8 @@ But now you are outside the domain of the Svelte compiler and its harder to add 
 	let showContent = false;
 </script>
 
-<button use:inject{"#navbar"} on:click={() => showContent = !showContent}/>
-<div use:inject{"#container"} class:hidden={showContent}/>
+<button use:inject={"#navbar"} on:click={() => showContent = !showContent}/>
+<div use:inject={"#container"} class:hidden={showContent}/>
 ```
 Now everything is inside one Svelte component and its also reactive.
 
