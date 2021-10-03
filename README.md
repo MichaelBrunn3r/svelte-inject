@@ -1,5 +1,23 @@
 # Svelte Inject
+[![](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![](https://img.shields.io/npm/v/@mibu/svelte-inject.svg)](https://npmjs.org/package/@mibu/svelte-inject)
+
 Svelte action to inject elements into the DOM
+
+- [Installation](#Installation)
+- [Why](#Why)
+- [Usage](#Usage)
+
+## Installation
+```bash
+yarn add -D @mibu/svelte-inject
+```
+
+```svelte
+<script>
+	import {inject} from "@mibu/svelte-inject"
+</script>
+```
 
 ## Why
 Useful when injectig Svelte into exising code at runtime, e.g. GreaseMonkey userscripts.<br>
@@ -39,13 +57,6 @@ Now everything is inside one Svelte component and its also reactive.
 
 
 ## Usage
-Import `inject`:
-```svelte
-<script>
-	import inject from "@mibu/svelte-inject"
-</script>
-```
-
 The `inject` action takes one argument `{<mode>: <target>}`:
 - `<mode>`: Where the element will be injected
 - `<target>`: Either an HTMLElement or a query selector string
